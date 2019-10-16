@@ -20,11 +20,7 @@ class School
   end 
   
   def sort
-    sorted={}
-    roster.each do |grade, name|
-      sorted[grade]=name.sort
-    end 
-    sorted 
+    @roster.transform_values {|students| students.sort}
   end 
       
 end 
